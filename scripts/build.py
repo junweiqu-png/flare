@@ -53,6 +53,8 @@ def build():
     output.mkdir(exist_ok=True)
     (output / "index.html").write_text(template.replace("__NAV_DATA__", payload), encoding="utf-8")
     (output / ".nojekyll").write_text("", encoding="utf-8")
+    (ROOT / "index.html").write_text(template.replace("__NAV_DATA__", payload), encoding="utf-8")
+    (ROOT / ".nojekyll").write_text("", encoding="utf-8")
     apps = sum(x.get('kind') == 'apps' for x in data['links'])
     print(f"生成成功：{apps} 个应用，{len(data['links']) - apps} 个书签，{len(data.get('categories', []))} 个分类")
 

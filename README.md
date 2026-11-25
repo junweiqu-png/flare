@@ -13,7 +13,7 @@
 
 ## 更新导航
 
-编辑 `data/nav.json`，提交到 `main` 后自动构建并发布。公开页面不依赖 NAS 或 870 在线。
+编辑 `data/nav.json` 后，运行 `python3 scripts/build.py` 生成根目录的 `index.html`，再一起提交到 `main`。Pages 从 `main` 分支根目录直接发布。公开页面不依赖 NAS 或 870 在线。
 
 从原 YAML 再导入时，在装有 PyYAML 的开发环境运行：
 
@@ -22,7 +22,7 @@ python3 scripts/import_yaml.py /path/to/original-flare-directory
 python3 scripts/build.py
 ```
 
-构建和线上运行无需第三方依赖。GitHub Pages 托管生成的 HTML，不运行 Flare 服务端、数据库或原后台编辑器。
+构建和线上运行无需第三方依赖。仓库 Settings → Pages 选择 Deploy from a branch、main、/(root)。GitHub Pages 托管生成的 HTML，不运行 Flare 服务端、数据库或原后台编辑器。
 `env.env`、数据库凭据和 ARM 可执行程序不进入仓库。
 
 原 Flare 项目：[soulteary/docker-flare](https://github.com/soulteary/docker-flare)。本仓库使用随原文件提供的 AGPL-3.0 许可证，见 `LICENSE`。
