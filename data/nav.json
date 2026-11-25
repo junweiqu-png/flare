@@ -1,16 +1,429 @@
 {
   "title": "Flare 导航",
-  "description": "我的常用站点",
+  "description": "我的应用与书签",
+  "categories": [
+    {
+      "id": "1",
+      "title": "我的工具"
+    },
+    {
+      "id": "2",
+      "title": "影音娱乐"
+    },
+    {
+      "id": "3",
+      "title": "下载"
+    },
+    {
+      "id": "4",
+      "title": "网络与域名"
+    },
+    {
+      "id": "5",
+      "title": "网络检测"
+    },
+    {
+      "id": "6",
+      "title": "AI 与搜索"
+    },
+    {
+      "id": "7",
+      "title": "代理与 VPN"
+    },
+    {
+      "id": "8",
+      "title": "海外与通信"
+    },
+    {
+      "id": "9",
+      "title": "云服务"
+    },
+    {
+      "id": "10",
+      "title": "金融"
+    }
+  ],
+  "settings": {
+    "greetings": [
+      "早上好",
+      "中午好",
+      "下午好",
+      "晚上好"
+    ],
+    "showDateTime": true,
+    "openAppNewTab": true,
+    "openBookmarkNewTab": true,
+    "theme": "blues"
+  },
   "recovery": {
-    "complete": false,
-    "message": "已找回 6 个旧入口。完整备份尚未读取，原有分类和其余链接待恢复。"
+    "complete": true,
+    "apps": 10,
+    "bookmarks": 50,
+    "categories": 10,
+    "privateLinks": 1
   },
   "links": [
-    {"name": "Flare 原导航", "url": "https://flare.afca.eu.org/", "description": "NAS 上的原导航入口", "category": "已找回的入口", "icon": "F"},
-    {"name": "群晖 NAS", "url": "https://nas.afca.eu.org/#/signin", "description": "群晖管理页面", "category": "已找回的入口", "icon": "NAS"},
-    {"name": "Alist", "url": "http://wsv6.afca.eu.org:5244/@login?redirect=%2F", "description": "文件列表", "category": "已找回的入口", "icon": "A"},
-    {"name": "PiKVM", "url": "https://pikvm.afca.eu.org/login/", "description": "远程控制入口", "category": "已找回的入口", "icon": "KVM"},
-    {"name": "Bitwarden", "url": "https://bw.afca.eu.org/#/login", "description": "密码管理器", "category": "已找回的入口", "icon": "B"},
-    {"name": "旧服务入口", "url": "http://101.200.149.8:48887", "description": "已找回地址，原名称待核对", "category": "已找回的入口", "icon": "WEB"}
+    {
+      "name": "主路由（内网）",
+      "kind": "apps",
+      "category": "常用应用",
+      "url": "http://192.168.5.1"
+    },
+    {
+      "name": "主路由（外网）",
+      "kind": "apps",
+      "category": "常用应用",
+      "url": "https://router.afca.eu.org"
+    },
+    {
+      "name": "Flare 书签",
+      "kind": "apps",
+      "category": "常用应用",
+      "url": "https://flare.afca.eu.org/"
+    },
+    {
+      "name": "蒲公英 X1（内网）",
+      "kind": "apps",
+      "category": "常用应用",
+      "url": "http://192.168.6.1"
+    },
+    {
+      "name": "PiKVM（内网）",
+      "kind": "apps",
+      "category": "常用应用",
+      "url": "http://192.168.5.29"
+    },
+    {
+      "name": "PiKVM（外网）",
+      "kind": "apps",
+      "category": "常用应用",
+      "url": "https://pikvm.afca.eu.org"
+    },
+    {
+      "name": "Bitwarden 870",
+      "kind": "apps",
+      "category": "常用应用",
+      "url": "https://bitwarden.afca.eu.org"
+    },
+    {
+      "name": "wsDDNS",
+      "kind": "apps",
+      "category": "常用应用",
+      "url": "https://wddns.afca.eu.org"
+    },
+    {
+      "name": "AList",
+      "kind": "apps",
+      "category": "常用应用",
+      "url": "http://walist.afca.eu.org"
+    },
+    {
+      "name": "DS213J",
+      "kind": "apps",
+      "category": "常用应用",
+      "url": "https://nas.afca.eu.org"
+    },
+    {
+      "name": "kekec上网",
+      "kind": "bookmarks",
+      "category": "代理与 VPN",
+      "private": true,
+      "private_id": "private-4c34a569ade6",
+      "display_host": "kekecf.afca.eu.org"
+    },
+    {
+      "name": "CF VPN",
+      "kind": "bookmarks",
+      "category": "代理与 VPN",
+      "url": "https://20260411.afca.eu.org/admin"
+    },
+    {
+      "name": "加拿大电话保号",
+      "kind": "bookmarks",
+      "category": "海外与通信",
+      "url": "https://h5.kitesim.co/#/pages/order/order"
+    },
+    {
+      "name": "Giffgaff",
+      "kind": "bookmarks",
+      "category": "海外与通信",
+      "url": "https://www.giffgaff.com/"
+    },
+    {
+      "name": "SWIFT",
+      "kind": "bookmarks",
+      "category": "金融",
+      "url": "https://www.swift.com/search?keywords=Rmb+2026&search-origin=result_search"
+    },
+    {
+      "name": "IP 纯净度",
+      "kind": "bookmarks",
+      "category": "网络检测",
+      "url": "https://net.coffee/"
+    },
+    {
+      "name": "DNS Leak 1",
+      "kind": "bookmarks",
+      "category": "网络检测",
+      "url": "https://dnscheck.cleardns.com/"
+    },
+    {
+      "name": "用于甲骨文云和谷歌IP纯净度测试",
+      "kind": "bookmarks",
+      "category": "网络检测",
+      "url": "https://ping0.cc/"
+    },
+    {
+      "name": "IPPure",
+      "kind": "bookmarks",
+      "category": "网络检测",
+      "url": "https://ippure.com/en/"
+    },
+    {
+      "name": "DNS Leak 2",
+      "kind": "bookmarks",
+      "category": "网络检测",
+      "url": "https://browserleaks.com/dns"
+    },
+    {
+      "name": "ITDOG",
+      "kind": "bookmarks",
+      "category": "网络检测",
+      "url": "https://www.itdog.cn/"
+    },
+    {
+      "name": "优选 CDN",
+      "kind": "bookmarks",
+      "category": "网络与域名",
+      "url": "http://localhost:13335/"
+    },
+    {
+      "name": "EU.org 域名",
+      "kind": "bookmarks",
+      "category": "网络与域名",
+      "url": "https://nic.eu.org/"
+    },
+    {
+      "name": "Cloudflare",
+      "kind": "bookmarks",
+      "category": "网络与域名",
+      "url": "https://www.cloudflare-cn.com/"
+    },
+    {
+      "name": "主电脑 RDA",
+      "kind": "bookmarks",
+      "category": "网络与域名",
+      "url": "http://101.200.149.8:48887"
+    },
+    {
+      "name": "优选IP CF EDT导航",
+      "kind": "bookmarks",
+      "category": "网络与域名",
+      "url": "https://bestcf.pages.dev/"
+    },
+    {
+      "name": "优选IP CM优选域名",
+      "kind": "bookmarks",
+      "category": "网络与域名",
+      "url": "https://cf.090227.xyz/"
+    },
+    {
+      "name": "优选IP  best ips",
+      "kind": "bookmarks",
+      "category": "网络与域名",
+      "url": "https://github.com/lancelotrar/best-cf-ips"
+    },
+    {
+      "name": "优选IP CFDATA",
+      "kind": "bookmarks",
+      "category": "网络与域名",
+      "url": "https://github.com/PoemMisty/CFData-WEB/releases"
+    },
+    {
+      "name": "优选IP和推荐vps",
+      "kind": "bookmarks",
+      "category": "网络与域名",
+      "url": "https://vps789.com/cfip"
+    },
+    {
+      "name": "flomo",
+      "kind": "bookmarks",
+      "category": "我的工具",
+      "url": "https://v.flomoapp.com/login/"
+    },
+    {
+      "name": "幕布",
+      "kind": "bookmarks",
+      "category": "我的工具",
+      "url": "https://mubu.com/home"
+    },
+    {
+      "name": "Doit.im",
+      "kind": "bookmarks",
+      "category": "我的工具",
+      "url": "https://i.doitim.com/home/#/today"
+    },
+    {
+      "name": "Shorts",
+      "kind": "bookmarks",
+      "category": "我的工具",
+      "url": "http://101.200.149.8:49006/derived-directory-adaptive-candidate.html"
+    },
+    {
+      "name": "蓝牙GPT LIVE",
+      "kind": "bookmarks",
+      "category": "我的工具",
+      "url": "http://127.0.0.1:18712/?utm_source=chatgpt.com"
+    },
+    {
+      "name": "企业微信",
+      "kind": "bookmarks",
+      "category": "我的工具",
+      "url": "https://work.weixin.qq.com/wework_admin/frame#profile/wxPlugin"
+    },
+    {
+      "name": "Shorts WMV测试",
+      "kind": "bookmarks",
+      "category": "我的工具",
+      "url": "http://101.200.149.8:49014/"
+    },
+    {
+      "name": "PAOS",
+      "kind": "bookmarks",
+      "category": "我的工具",
+      "url": "https://paos.afca.eu.org/"
+    },
+    {
+      "name": "drop",
+      "kind": "bookmarks",
+      "category": "我的工具",
+      "url": "https://drop.afca.eu.org/"
+    },
+    {
+      "name": "小古文",
+      "kind": "bookmarks",
+      "category": "我的工具",
+      "url": "https://junweiqu-png.github.io/shanghan-selector/wenyan/?v=20261111-char1&utm_source=chatgpt.com"
+    },
+    {
+      "name": "github排行榜",
+      "kind": "bookmarks",
+      "category": "我的工具",
+      "url": "https://junweiqu-png.github.io/github-rank/"
+    },
+    {
+      "name": "伤寒网站",
+      "kind": "bookmarks",
+      "category": "我的工具",
+      "url": "https://junweiqu-png.github.io/shanghan-selector/"
+    },
+    {
+      "name": "图片处理工具",
+      "kind": "bookmarks",
+      "category": "我的工具",
+      "url": "http://192.168.5.15:18711/prototype/archive-batch"
+    },
+    {
+      "name": "GitHub（备用）",
+      "kind": "bookmarks",
+      "category": "下载",
+      "url": "https://www.github.com"
+    },
+    {
+      "name": "xiazgt",
+      "kind": "bookmarks",
+      "category": "下载",
+      "url": "https://xiazgit.afca.eu.org/"
+    },
+    {
+      "name": "xiazgt1",
+      "kind": "bookmarks",
+      "category": "下载",
+      "url": "https://xiazgit1.afca.eu.org/"
+    },
+    {
+      "name": "GitHub 反代",
+      "kind": "bookmarks",
+      "category": "下载",
+      "url": "https://wsv6.afca.eu.org:1359/"
+    },
+    {
+      "name": "GitHub",
+      "kind": "bookmarks",
+      "category": "下载",
+      "url": "https://github.com/"
+    },
+    {
+      "name": "YouTube",
+      "kind": "bookmarks",
+      "category": "影音娱乐",
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "name": "网盘搜索",
+      "kind": "bookmarks",
+      "category": "影音娱乐",
+      "url": "https://wangpansou.net/s?q="
+    },
+    {
+      "name": "铂金学院",
+      "kind": "bookmarks",
+      "category": "影音娱乐",
+      "url": "https://ptchina.org/index.php"
+    },
+    {
+      "name": "MoviePilot（节点小宝）",
+      "kind": "bookmarks",
+      "category": "影音娱乐",
+      "url": "http://kekeforever.iepose.cn"
+    },
+    {
+      "name": "RackNerd",
+      "kind": "bookmarks",
+      "category": "云服务",
+      "url": "https://my.racknerd.com/"
+    },
+    {
+      "name": "阿里云国内",
+      "kind": "bookmarks",
+      "category": "云服务",
+      "url": "https://cn.aliyun.com/benefit?from_alibabacloud=&utm_content=se_1021731103"
+    },
+    {
+      "name": "Kimi",
+      "kind": "bookmarks",
+      "category": "AI 与搜索",
+      "url": "https://kimi.moonshot.cn/"
+    },
+    {
+      "name": "DeepSeek",
+      "kind": "bookmarks",
+      "category": "AI 与搜索",
+      "url": "https://chat.deepseek.com/"
+    },
+    {
+      "name": "百度",
+      "kind": "bookmarks",
+      "category": "AI 与搜索",
+      "url": "http://www.baidu.com/"
+    },
+    {
+      "name": "谷歌（加拿大）",
+      "kind": "bookmarks",
+      "category": "AI 与搜索",
+      "url": "http://www.google.ca/"
+    },
+    {
+      "name": "谷歌（日本）",
+      "kind": "bookmarks",
+      "category": "AI 与搜索",
+      "url": "https://www.google.co.jp/"
+    },
+    {
+      "name": "ChatGPT",
+      "kind": "bookmarks",
+      "category": "AI 与搜索",
+      "url": "https://chatgpt.com/c/6792539b-f664-8001-b2c6-22dc0ea4e10c"
+    }
   ]
 }

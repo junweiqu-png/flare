@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 .openai/
 private/
+.env
+.env.*
+env.env
+flare

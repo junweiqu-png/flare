@@ -1,36 +1,28 @@
 # Flare 导航
 
-用于 GitHub Pages 的个人导航。手机和电脑均可访问，页面不依赖 NAS、870 或 Docker 在线。
-导航指向的 NAS、密码管理器和其他服务仍需各自在线。
+从原 Flare 的 `apps.yml`、`bookmarks.yml`、`config.yml` 恢复的 GitHub Pages 静态导航。
 
-## 当前恢复状态
+网页：[https://junweiqu-png.github.io/flare/](https://junweiqu-png.github.io/flare/)
 
-当前为部分恢复版本。根据已有记录找回 6 个旧入口，完整原始备份尚未读取。
-已有记录曾报告原导航为 46 个 URL、10 个分类、10 个顶部应用；该数量尚未用原文件重新核对。
-当前 `data/nav.json` 的分类为恢复期间临时分组，不代表原分类。
+原文件共有 **10 个应用、50 个书签、10 个分类**。保留应用顺序、各分类内的书签顺序和全部名称；分类按原定义排列。
+页面包含原配置的蓝色主题、时间问候、北京时间和新窗口打开设置，支持应用/书签搜索、分类筛选、手机布局和深浅主题。
 
-## 更新数据
+有 1 个代理入口包含私密访问标识。公开源码仅保留名称和本机入口标识，原地址不上传。
+点击该入口可在自己的浏览器填写完整地址，仅保存在本机；其他设备需分别设置。
+内网和本机链接保留原地址，并标注使用范围；目标服务仍需在线，且设备需要能访问相应网络。
 
-修改 `data/nav.json` 后提交到 `main`，GitHub Actions 自动生成并发布网页。
-所有导航数据直接写入生成的 HTML，打开网页时无需额外请求数据文件或第三方脚本。
+## 更新导航
 
-如果拿到原备份 `data-original.json`，先检查内容和结构，然后运行：
+编辑 `data/nav.json`，提交到 `main` 后自动构建并发布。公开页面不依赖 NAS 或 870 在线。
+
+从原 YAML 再导入时，在装有 PyYAML 的开发环境运行：
 
 ```sh
-python3 scripts/import_flare.py /path/to/data-original.json
+python3 scripts/import_yaml.py /path/to/original-flare-directory
 python3 scripts/build.py
 ```
 
-核对导入数量、每个分类以及顶部应用后，再将 `recovery.complete` 改为 `true`。
-导入程序支持常见的 apps/bookmarks/categories JSON 结构；未知结构会报错，需要按实际原文件调整。
-它不会凭条目数量自动声称完整恢复。
+构建和线上运行无需第三方依赖。GitHub Pages 托管生成的 HTML，不运行 Flare 服务端、数据库或原后台编辑器。
+`env.env`、数据库凭据和 ARM 可执行程序不进入仓库。
 
-## 首次部署
-
-1. 使用 `junweiqu-png/flare` 独立仓库。
-2. 上传本目录的源文件到 `main`。
-3. 在仓库 Settings → Pages 的 Source 中选择 GitHub Actions。
-4. 检查 Publish navigation 运行成功，并实际打开 Pages 返回的网址。
-
-公开页面和仓库不要包含密码、API 密钥、登录 Cookie、完整原服务器配置或带登录凭据的 URL。
-构建程序会拒绝明显含用户名密码或密钥参数的链接。
+原 Flare 项目：[soulteary/docker-flare](https://github.com/soulteary/docker-flare)。本仓库使用随原文件提供的 AGPL-3.0 许可证，见 `LICENSE`。
