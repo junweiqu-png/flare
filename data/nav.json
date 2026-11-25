@@ -1,0 +1,16 @@
+{
+  "title": "Flare 导航",
+  "description": "我的常用站点",
+  "recovery": {
+    "complete": false,
+    "message": "已找回 6 个旧入口。完整备份尚未读取，原有分类和其余链接待恢复。"
+  },
+  "links": [
+    {"name": "Flare 原导航", "url": "https://flare.afca.eu.org/", "description": "NAS 上的原导航入口", "category": "已找回的入口", "icon": "F"},
+    {"name": "群晖 NAS", "url": "https://nas.afca.eu.org/#/signin", "description": "群晖管理页面", "category": "已找回的入口", "icon": "NAS"},
+    {"name": "Alist", "url": "http://wsv6.afca.eu.org:5244/@login?redirect=%2F", "description": "文件列表", "category": "已找回的入口", "icon": "A"},
+    {"name": "PiKVM", "url": "https://pikvm.afca.eu.org/login/", "description": "远程控制入口", "category": "已找回的入口", "icon": "KVM"},
+    {"name": "Bitwarden", "url": "https://bw.afca.eu.org/#/login", "description": "密码管理器", "category": "已找回的入口", "icon": "B"},
+    {"name": "旧服务入口", "url": "http://101.200.149.8:48887", "description": "已找回地址，原名称待核对", "category": "已找回的入口", "icon": "WEB"}
+  ]
+}
