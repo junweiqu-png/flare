@@ -15,6 +15,7 @@ let importPending = null, renamedCategory = null, editorVersion = 0;
 let mode = local.get('network') === 'internal' ? 'internal' : 'external';
 let toastTimer;
 let locallyLocked = local.get('locked') === '1';
+let authEpoch = 0;
 
 function toast(message) { $('toast').textContent = message; $('toast').hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { $('toast').hidden = true; }, 6000); }
 function showError(id, error) { $(id).textContent = error.message || String(error); $(id).hidden = false; }
@@ -23,7 +24,7 @@ function element(tag, cls, content) { const e = document.createElement(tag); if 
 function clone() { return structuredClone(state); }
 function syncText(message) { $('sync-status').textContent = message; }
 function anyDialog() { return Boolean(document.querySelector('dialog[open]')); }
-function activeItems() { return state.links.filter(x => !x.deletedAt); }
+function activeItems() { return state.links.filter(x => !x.deletedAt && (owner || (!x.private && !needsPrivacy(x)))); }
 
 document.documentElement.dataset.theme = local.get('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 $('theme').addEventListener('click', () => { const value = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; document.documentElement.dataset.theme = value; local.set('theme', value); });
@@ -49,11 +50,13 @@ async function api(path, options = {}) {
 }
 
 function rememberPublic() {
-  const safe = owner ? publicState(state) : { ...state, privateCount };
+  const safe = publicState(state);
+  if (!owner) { safe.privateCount = Math.max(privateCount, safe.privateCount); safe.totalCount = safe.links.length + safe.privateCount; }
   local.set('public-cache', JSON.stringify({ state: safe, version }));
 }
 
 function lock() {
+  authEpoch++;
   if (owner) { const safe = publicState(state); state = normalizeState(safe); privateCount = safe.privateCount; }
   owner = null; managing = false; importPending = null;
   for (const d of document.querySelectorAll('dialog[open]')) d.close();
@@ -63,21 +66,24 @@ function lock() {
 
 async function refresh({ quiet = false } = {}) {
   if (busy) return;
+  const epoch = authEpoch;
   if (!quiet) syncText('正在同步…');
   try {
     if (PRIVATE_APP && !locallyLocked) {
       try {
         const me = await api('/api/me');
         const current = await api('/api/state');
+        if (epoch !== authEpoch || locallyLocked || busy || (current.version && current.version < version)) return;
         owner = me.login; version = current.version;
         if (current.state) state = normalizeState(current.state);
         privateCount = activeItems().filter(x => x.private).length || (current.version === 0 ? SEED.privateCount : 0);
         rememberPublic(); render();
         syncText(current.version ? `已同步 · ${new Date(current.updatedAt).toLocaleTimeString('zh-CN', { timeZone: 'Asia/Shanghai', hour: '2-digit', minute: '2-digit' })}` : '已登录 · 请先导入完整导航备份');
         return;
-      } catch (error) { if (error.status !== 401) throw error; lock(); }
+      } catch (error) { if (error.status !== 401) throw error; if (epoch !== authEpoch) return; lock(); }
     }
     const current = await api('/api/public');
+    if (owner || busy || current.version < version) return;
     state = normalizeState(current.state); version = current.version; privateCount = current.state.privateCount || 0;
     rememberPublic(); render(); syncText('公开导航 · 已同步');
   } catch (error) {
@@ -98,9 +104,11 @@ async function save(next, expectedVersion = version) {
   if (busy) throw new Error('上一项修改正在同步，请稍候。');
   if (expectedVersion !== version) throw new Error('其他设备已更新导航。输入仍保留，请先复制需要保留的内容，关闭后重新编辑。');
   const checked = normalizeState(next);
+  const epoch = authEpoch;
   busy = true; syncText('正在保存并同步…');
   try {
     const answer = await api('/api/state', { method: 'PUT', body: { expectedVersion, state: checked } });
+    if (epoch !== authEpoch || !owner || locallyLocked) return false;
     state = normalizeState(answer.state); version = answer.version; privateCount = activeItems().filter(x => x.private).length;
     rememberPublic(); render(); syncText('已同步 · 刚刚'); return true;
   } catch (error) {
@@ -292,7 +300,7 @@ $('copy-login-code').addEventListener('click', async () => { try { await navigat
 function schedulePoll(seconds) { clearTimeout(loginTimer); loginTimer = setTimeout(pollLogin, Math.max(seconds, 5) * 1000); }
 async function pollLogin() {
   if (!loginFlow || !$('login-dialog').open) return;
-  try { const result = await api('/auth/device/poll', { method: 'POST', body: { flowToken: loginFlow.flowToken } }); if (result.pending) { schedulePoll(result.interval); return; } loginFlow = null; locallyLocked = false; local.set('locked', '0'); $('login-dialog').close(); await refresh(); toast('已登录，私密入口和修改会跨设备同步。'); }
+  try { const result = await api('/auth/device/poll', { method: 'POST', body: { flowToken: loginFlow.flowToken } }); if (result.pending) { schedulePoll(result.interval); return; } loginFlow = null; authEpoch++; locallyLocked = false; local.set('locked', '0'); $('login-dialog').close(); await refresh(); toast('已登录，私密入口和修改会跨设备同步。'); }
   catch (error) { if (error.status && [401, 403, 410].includes(error.status)) { loginFlow = null; $('login-intro').hidden = false; $('login-code-panel').hidden = true; showError('login-error', error); } else { $('login-progress').textContent = '连接暂时中断，正在重试…'; schedulePoll(10); } }
 }
 $('login-dialog').addEventListener('close', () => { clearTimeout(loginTimer); loginFlow = null; $('login-code').textContent = ''; $('login-intro').hidden = false; $('login-code-panel').hidden = true; });
