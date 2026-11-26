@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "flare-nav-sync",
+  "main": "index.mjs",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "triggers": { "crons": ["15 3 * * *"] },
+  "vars": {
+    "SITE_URL": "https://junweiqu-png.github.io/flare/",
+    "ALLOWED_GITHUB_ID": "308556221",
+    "GITHUB_CLIENT_ID": "SET_PUBLIC_CLIENT_ID"
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "flare-nav-sync",
+    "database_id": "SET_DATABASE_ID",
+    "migrations_dir": "migrations"
+  }]
+}
