@@ -39,10 +39,4 @@ def convert(directory):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("directory", type=Path)
-    parser.add_argument("--output", type=Path, default=ROOT / "data/nav.json")
-    args = parser.parse_args()
-    data = convert(args.directory)
-    args.output.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps(data["recovery"], ensure_ascii=False))
+    raise SystemExit("第二版已停用旧 YAML 导入，请在个人导航中导入完整 JSON 或浏览器 HTML 备份。")

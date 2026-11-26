@@ -1,429 +1,711 @@
 {
+  "schemaVersion": 2,
   "title": "Flare 导航",
-  "description": "我的应用与书签",
   "categories": [
-    {
-      "id": "1",
-      "title": "我的工具"
-    },
-    {
-      "id": "2",
-      "title": "影音娱乐"
-    },
-    {
-      "id": "3",
-      "title": "下载"
-    },
-    {
-      "id": "4",
-      "title": "网络与域名"
-    },
-    {
-      "id": "5",
-      "title": "网络检测"
-    },
-    {
-      "id": "6",
-      "title": "AI 与搜索"
-    },
-    {
-      "id": "7",
-      "title": "代理与 VPN"
-    },
-    {
-      "id": "8",
-      "title": "海外与通信"
-    },
-    {
-      "id": "9",
-      "title": "云服务"
-    },
-    {
-      "id": "10",
-      "title": "金融"
-    }
+    "我的工具",
+    "影音娱乐",
+    "下载",
+    "网络与域名",
+    "网络检测",
+    "AI 与搜索",
+    "代理与 VPN",
+    "海外与通信",
+    "云服务",
+    "金融"
   ],
-  "settings": {
-    "greetings": [
-      "早上好",
-      "中午好",
-      "下午好",
-      "晚上好"
-    ],
-    "showDateTime": true,
-    "openAppNewTab": true,
-    "openBookmarkNewTab": true,
-    "theme": "blues"
-  },
-  "recovery": {
-    "complete": true,
-    "apps": 10,
-    "bookmarks": 50,
-    "categories": 10,
-    "privateLinks": 1
-  },
   "links": [
     {
-      "name": "主路由（内网）",
-      "kind": "apps",
-      "category": "常用应用",
-      "url": "http://192.168.5.1"
-    },
-    {
+      "id": "link-7cd8d483ab3e80d0",
       "name": "主路由（外网）",
+      "url": "https://router.afca.eu.org/",
+      "internalUrl": "",
       "kind": "apps",
       "category": "常用应用",
-      "url": "https://router.afca.eu.org"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": true,
+      "private": false
     },
     {
+      "id": "link-93f39ffcf478fa3e",
       "name": "Flare 书签",
+      "url": "https://flare.afca.eu.org/",
+      "internalUrl": "",
       "kind": "apps",
       "category": "常用应用",
-      "url": "https://flare.afca.eu.org/"
+      "description": "",
+      "aliases": [
+        "导航",
+        "daohang"
+      ],
+      "tags": [],
+      "pinned": true,
+      "private": false
     },
     {
-      "name": "蒲公英 X1（内网）",
-      "kind": "apps",
-      "category": "常用应用",
-      "url": "http://192.168.6.1"
-    },
-    {
-      "name": "PiKVM（内网）",
-      "kind": "apps",
-      "category": "常用应用",
-      "url": "http://192.168.5.29"
-    },
-    {
+      "id": "link-6a29604218f8fc9f",
       "name": "PiKVM（外网）",
+      "url": "https://pikvm.afca.eu.org/",
+      "internalUrl": "",
       "kind": "apps",
       "category": "常用应用",
-      "url": "https://pikvm.afca.eu.org"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": true,
+      "private": false
     },
     {
+      "id": "link-286c84fd0ec6d20c",
       "name": "Bitwarden 870",
+      "url": "https://bitwarden.afca.eu.org/",
+      "internalUrl": "",
       "kind": "apps",
       "category": "常用应用",
-      "url": "https://bitwarden.afca.eu.org"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": true,
+      "private": false
     },
     {
+      "id": "link-6f078c3646512410",
       "name": "wsDDNS",
+      "url": "https://wddns.afca.eu.org/",
+      "internalUrl": "",
       "kind": "apps",
       "category": "常用应用",
-      "url": "https://wddns.afca.eu.org"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": true,
+      "private": false
     },
     {
+      "id": "link-03e1b1b09fe2c7b3",
       "name": "AList",
+      "url": "http://walist.afca.eu.org/",
+      "internalUrl": "",
       "kind": "apps",
       "category": "常用应用",
-      "url": "http://walist.afca.eu.org"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": true,
+      "private": false
     },
     {
+      "id": "link-80fcfabbb0f4d12a",
       "name": "DS213J",
+      "url": "https://nas.afca.eu.org/",
+      "internalUrl": "",
       "kind": "apps",
       "category": "常用应用",
-      "url": "https://nas.afca.eu.org"
+      "description": "",
+      "aliases": [
+        "nas",
+        "群晖"
+      ],
+      "tags": [],
+      "pinned": true,
+      "private": false
     },
     {
-      "name": "kekec上网",
-      "kind": "bookmarks",
-      "category": "代理与 VPN",
-      "private": true,
-      "private_id": "private-4c34a569ade6",
-      "display_host": "kekecf.afca.eu.org"
-    },
-    {
+      "id": "link-e12481d7525078af",
       "name": "CF VPN",
+      "url": "https://20260411.afca.eu.org/admin",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "代理与 VPN",
-      "url": "https://20260411.afca.eu.org/admin"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-f8cad2ef13d1922a",
       "name": "加拿大电话保号",
+      "url": "https://h5.kitesim.co/#/pages/order/order",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "海外与通信",
-      "url": "https://h5.kitesim.co/#/pages/order/order"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-864a3849a0ffc6e8",
       "name": "Giffgaff",
+      "url": "https://www.giffgaff.com/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "海外与通信",
-      "url": "https://www.giffgaff.com/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-1ed8331624e4c85d",
       "name": "SWIFT",
+      "url": "https://www.swift.com/search?keywords=Rmb+2026&search-origin=result_search",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "金融",
-      "url": "https://www.swift.com/search?keywords=Rmb+2026&search-origin=result_search"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-e429291c275612b4",
       "name": "IP 纯净度",
+      "url": "https://net.coffee/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络检测",
-      "url": "https://net.coffee/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-6bea67336f2ab31a",
       "name": "DNS Leak 1",
+      "url": "https://dnscheck.cleardns.com/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络检测",
-      "url": "https://dnscheck.cleardns.com/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-89a9c35af0031f3d",
       "name": "用于甲骨文云和谷歌IP纯净度测试",
+      "url": "https://ping0.cc/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络检测",
-      "url": "https://ping0.cc/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-bc73a6ba5aec7511",
       "name": "IPPure",
+      "url": "https://ippure.com/en/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络检测",
-      "url": "https://ippure.com/en/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-5d14503ed379cb0f",
       "name": "DNS Leak 2",
+      "url": "https://browserleaks.com/dns",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络检测",
-      "url": "https://browserleaks.com/dns"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-cefa82b8cd14b49e",
       "name": "ITDOG",
+      "url": "https://www.itdog.cn/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络检测",
-      "url": "https://www.itdog.cn/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
-      "name": "优选 CDN",
-      "kind": "bookmarks",
-      "category": "网络与域名",
-      "url": "http://localhost:13335/"
-    },
-    {
+      "id": "link-a702bc5616c14524",
       "name": "EU.org 域名",
+      "url": "https://nic.eu.org/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络与域名",
-      "url": "https://nic.eu.org/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-1477f1fa2ba61da1",
       "name": "Cloudflare",
+      "url": "https://www.cloudflare-cn.com/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络与域名",
-      "url": "https://www.cloudflare-cn.com/"
+      "description": "",
+      "aliases": [
+        "导航",
+        "daohang"
+      ],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-5d6a0910f77de868",
       "name": "主电脑 RDA",
+      "url": "http://101.200.149.8:48887/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络与域名",
-      "url": "http://101.200.149.8:48887"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-b71cad855cd3ad23",
       "name": "优选IP CF EDT导航",
+      "url": "https://bestcf.pages.dev/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络与域名",
-      "url": "https://bestcf.pages.dev/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-22fbffadab7f21d8",
       "name": "优选IP CM优选域名",
+      "url": "https://cf.090227.xyz/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络与域名",
-      "url": "https://cf.090227.xyz/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-36a9187fb571cdd3",
       "name": "优选IP  best ips",
+      "url": "https://github.com/lancelotrar/best-cf-ips",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络与域名",
-      "url": "https://github.com/lancelotrar/best-cf-ips"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-c31710525f5a4493",
       "name": "优选IP CFDATA",
+      "url": "https://github.com/PoemMisty/CFData-WEB/releases",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络与域名",
-      "url": "https://github.com/PoemMisty/CFData-WEB/releases"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-f15060a52f332aa8",
       "name": "优选IP和推荐vps",
+      "url": "https://vps789.com/cfip",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "网络与域名",
-      "url": "https://vps789.com/cfip"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-f5cd483a86e8fa00",
       "name": "flomo",
+      "url": "https://v.flomoapp.com/login/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "我的工具",
-      "url": "https://v.flomoapp.com/login/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-1f8881f4d11a7b4d",
       "name": "幕布",
+      "url": "https://mubu.com/home",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "我的工具",
-      "url": "https://mubu.com/home"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-9f22ed251668f292",
       "name": "Doit.im",
+      "url": "https://i.doitim.com/home/#/today",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "我的工具",
-      "url": "https://i.doitim.com/home/#/today"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-0f85d11afbfdc230",
       "name": "Shorts",
+      "url": "http://101.200.149.8:49006/derived-directory-adaptive-candidate.html",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "我的工具",
-      "url": "http://101.200.149.8:49006/derived-directory-adaptive-candidate.html"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
-      "name": "蓝牙GPT LIVE",
-      "kind": "bookmarks",
-      "category": "我的工具",
-      "url": "http://127.0.0.1:18712/?utm_source=chatgpt.com"
-    },
-    {
+      "id": "link-e15fe0b4b680a212",
       "name": "企业微信",
+      "url": "https://work.weixin.qq.com/wework_admin/frame#profile/wxPlugin",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "我的工具",
-      "url": "https://work.weixin.qq.com/wework_admin/frame#profile/wxPlugin"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-be52875c18ad0ef7",
       "name": "Shorts WMV测试",
+      "url": "http://101.200.149.8:49014/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "我的工具",
-      "url": "http://101.200.149.8:49014/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-c465cf9ffc64a85f",
       "name": "PAOS",
+      "url": "https://paos.afca.eu.org/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "我的工具",
-      "url": "https://paos.afca.eu.org/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-56a74c2e99950297",
       "name": "drop",
+      "url": "https://drop.afca.eu.org/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "我的工具",
-      "url": "https://drop.afca.eu.org/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-044e740f3b8ed7fe",
       "name": "小古文",
+      "url": "https://junweiqu-png.github.io/shanghan-selector/wenyan/?v=20261111-char1&utm_source=chatgpt.com",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "我的工具",
-      "url": "https://junweiqu-png.github.io/shanghan-selector/wenyan/?v=20261111-char1&utm_source=chatgpt.com"
+      "description": "",
+      "aliases": [
+        "xiaoguwen",
+        "xgw"
+      ],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-9e5860eef4006d89",
       "name": "github排行榜",
+      "url": "https://junweiqu-png.github.io/github-rank/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "我的工具",
-      "url": "https://junweiqu-png.github.io/github-rank/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-b2067d28714b45ae",
       "name": "伤寒网站",
+      "url": "https://junweiqu-png.github.io/shanghan-selector/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "我的工具",
-      "url": "https://junweiqu-png.github.io/shanghan-selector/"
+      "description": "",
+      "aliases": [
+        "shanghan",
+        "shl"
+      ],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
-      "name": "图片处理工具",
-      "kind": "bookmarks",
-      "category": "我的工具",
-      "url": "http://192.168.5.15:18711/prototype/archive-batch"
-    },
-    {
+      "id": "link-e3285a0d290668ae",
       "name": "GitHub（备用）",
+      "url": "https://www.github.com/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "下载",
-      "url": "https://www.github.com"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-47d3ea064ba01d90",
       "name": "xiazgt",
+      "url": "https://xiazgit.afca.eu.org/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "下载",
-      "url": "https://xiazgit.afca.eu.org/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-a7490752616f0477",
       "name": "xiazgt1",
+      "url": "https://xiazgit1.afca.eu.org/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "下载",
-      "url": "https://xiazgit1.afca.eu.org/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-150484ce43ea7b4e",
       "name": "GitHub 反代",
+      "url": "https://wsv6.afca.eu.org:1359/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "下载",
-      "url": "https://wsv6.afca.eu.org:1359/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-0b758810b9b035a3",
       "name": "GitHub",
+      "url": "https://github.com/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "下载",
-      "url": "https://github.com/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-e0a4c3ca521dcd44",
       "name": "YouTube",
+      "url": "https://www.youtube.com/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "影音娱乐",
-      "url": "https://www.youtube.com/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-d6d207bcf883ade2",
       "name": "网盘搜索",
+      "url": "https://wangpansou.net/s?q=",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "影音娱乐",
-      "url": "https://wangpansou.net/s?q="
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-014116b4535e8c2f",
       "name": "铂金学院",
+      "url": "https://ptchina.org/index.php",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "影音娱乐",
-      "url": "https://ptchina.org/index.php"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-1ca91cf14c5d09e5",
       "name": "MoviePilot（节点小宝）",
+      "url": "http://kekeforever.iepose.cn/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "影音娱乐",
-      "url": "http://kekeforever.iepose.cn"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-05c59cc3bc81539b",
       "name": "RackNerd",
+      "url": "https://my.racknerd.com/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "云服务",
-      "url": "https://my.racknerd.com/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-05722b5ffb70e3aa",
       "name": "阿里云国内",
+      "url": "https://cn.aliyun.com/benefit?from_alibabacloud=&utm_content=se_1021731103",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "云服务",
-      "url": "https://cn.aliyun.com/benefit?from_alibabacloud=&utm_content=se_1021731103"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-44172b3d5a3a6794",
       "name": "Kimi",
+      "url": "https://kimi.moonshot.cn/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "AI 与搜索",
-      "url": "https://kimi.moonshot.cn/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-a6067f7da6869231",
       "name": "DeepSeek",
+      "url": "https://chat.deepseek.com/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "AI 与搜索",
-      "url": "https://chat.deepseek.com/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-e83669c9517069b1",
       "name": "百度",
+      "url": "http://www.baidu.com/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "AI 与搜索",
-      "url": "http://www.baidu.com/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-f7540b55e6f2ac4d",
       "name": "谷歌（加拿大）",
+      "url": "http://www.google.ca/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "AI 与搜索",
-      "url": "http://www.google.ca/"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     },
     {
+      "id": "link-a2b189c6858420ae",
       "name": "谷歌（日本）",
+      "url": "https://www.google.co.jp/",
+      "internalUrl": "",
       "kind": "bookmarks",
       "category": "AI 与搜索",
-      "url": "https://www.google.co.jp/"
-    },
-    {
-      "name": "ChatGPT",
-      "kind": "bookmarks",
-      "category": "AI 与搜索",
-      "url": "https://chatgpt.com/c/6792539b-f664-8001-b2c6-22dc0ea4e10c"
+      "description": "",
+      "aliases": [],
+      "tags": [],
+      "pinned": false,
+      "private": false
     }
-  ]
+  ],
+  "privateCount": 8,
+  "totalCount": 60
 }

@@ -68,10 +68,4 @@ def convert(source):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("source", type=Path)
-    parser.add_argument("--output", type=Path, default=ROOT / "data/nav.json")
-    args = parser.parse_args()
-    result = convert(json.loads(args.source.read_text(encoding="utf-8-sig")))
-    args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"导入 {len(result['links'])} 个入口。请核对数量、分类和顶部应用后再标记恢复完成。")
+    raise SystemExit("第二版已停用旧 YAML 导入，请在个人导航中导入完整 JSON 或浏览器 HTML 备份。")

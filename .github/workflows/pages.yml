@@ -2,6 +2,7 @@ name: Publish navigation
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
@@ -15,12 +16,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Check data rules, access control and sync conflicts
+        run: npm test
       - name: Build static navigation
         run: python3 scripts/build.py
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:
